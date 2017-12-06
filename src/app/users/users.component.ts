@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material';
 
 import { TdLoadingService, TdDialogService, TdMediaService } from '@covalent/core';
 
-import { UserService, IUser } from './services/user.service';
+import { UserService, IUser } from '../../services/user.service';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -58,7 +58,7 @@ export class UsersComponent implements AfterViewInit, OnInit {
     }
   }
 
-  delete(id: string): void {
+  delete(id: number): void {
     this._dialogService
       .openConfirm({message: 'Are you sure you want to delete this user?'})
       .afterClosed().toPromise().then((confirm: boolean) => {
@@ -68,7 +68,7 @@ export class UsersComponent implements AfterViewInit, OnInit {
       });
   }
 
-  private async _delete(id: string): Promise<void> {
+  private async _delete(id: number): Promise<void> {
     try {
       this._loadingService.register('users.list');
       await this._userService.delete(id).toPromise();

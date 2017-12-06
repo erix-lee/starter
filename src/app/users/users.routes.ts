@@ -7,7 +7,7 @@ import { UsersFormComponent } from './form/form.component';
 const routes: Routes = [{
     path: 'users',
     children: [{
-      path: '',
+      path: '',pathMatch: 'full' ,
       component: UsersComponent,
     }, {
       path: 'add',

@@ -23,7 +23,7 @@ const routes: Routes = [
         component: MainComponent,
         children: [
             {
-                component: DashboardComponent,
+                component: DashboardComponent,pathMatch: 'full' ,
                 path: '',
             },
             {
@@ -31,7 +31,7 @@ const routes: Routes = [
                 component: DashboardProductComponent,
                 children: [
                     {
-                        path: '',
+                        path: '',pathMatch: 'full' ,
                         component: ProductOverviewComponent
                     },
                     {
@@ -42,7 +42,7 @@ const routes: Routes = [
                         path: 'features',
                         children: [
                             {
-                                path: '',
+                                path: '',pathMatch: 'full' ,
                                 component: ProductFeaturesComponent
                             },
                             {
@@ -66,11 +66,11 @@ const routes: Routes = [
                 component: DetailComponent
             },
             {
-                path: 'logs',
+                path: 'logs',pathMatch: 'full' ,
                 component: LogsComponent
             },
             {
-                path: 'form',
+                path: 'form',pathMatch: 'full' ,
                 component: FormComponent
             },
             { path: '', loadChildren: './users/users.module#UsersModule' },

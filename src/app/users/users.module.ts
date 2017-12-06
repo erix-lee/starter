@@ -14,9 +14,9 @@ import { UsersFormComponent } from './form/form.component';
 
 import { userRoutes } from './users.routes';
 
-import { UserService, IUser, USER_PROVIDER, USERS_API } from './services/user.service';
+import { UserService, IUser } from '../../services/user.service';
 
-export { UsersComponent, UsersFormComponent, UserService, IUser, USER_PROVIDER, USERS_API };
+export { UsersComponent, UsersFormComponent, UserService, IUser };
 
 @NgModule({
   declarations: [
@@ -50,8 +50,6 @@ export { UsersComponent, UsersFormComponent, UserService, IUser, USER_PROVIDER, 
     userRoutes,
   ], // modules needed to run this module
   providers: [
-    { provide: USERS_API, useValue: ''},
-    USER_PROVIDER,
   ],
 })
 export class UsersModule {}

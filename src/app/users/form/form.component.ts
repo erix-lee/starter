@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
-import { UserService, IUser } from '../services/user.service';
+import { UserService, IUser } from '../../../services/user.service';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -18,7 +18,7 @@ export class UsersFormComponent implements OnInit {
 
   displayName: string;
   email: string;
-  id: string;
+  id: number;
   admin: boolean;
   user: IUser;
   action: string;
@@ -38,7 +38,7 @@ export class UsersFormComponent implements OnInit {
     this._route.url.subscribe((url: any) => {
       this.action = (url.length > 1 ? url[1].path : 'add');
     });
-    this._route.params.subscribe((params: {id: string}) => {
+    this._route.params.subscribe((params: {id: number}) => {
       this.id = params.id;
       if (this.id) {
         this.load();
@@ -69,14 +69,14 @@ export class UsersFormComponent implements OnInit {
         displayName: this.displayName,
         email: this.email,
         siteAdmin: siteAdmin,
-        id: this.id || this.displayName.replace(/\s+/g, '.'),
+        id: this.id ,
         created: now,
         lastAccess: now,
       };
       if (this.action === 'add') {
         await this._userService.create(this.user).toPromise();
       } else {
-        await this._userService.update(this.id, this.user).toPromise();
+        await this._userService.update( this.user).toPromise();
       }
       this._snackBarService.open('User Saved', 'Ok');
       this.goBack();

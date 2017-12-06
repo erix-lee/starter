@@ -11,7 +11,7 @@ import { FeaturesService, IFeature } from '../../../../services';
   viewProviders: [ FeaturesService ],
 })
 export class FeaturesFormComponent implements OnInit  {
-  id: string;
+  id: number;
   title: string;
   icon: string;
   enabled: boolean;
@@ -30,8 +30,8 @@ export class FeaturesFormComponent implements OnInit  {
     this._route.url.subscribe((url: any) => {
       this.action = (url.length > 1 ? url[1].path : 'add');
     });
-    this._route.params.subscribe((params: {id: string}) => {
-      let featureId: string = params.id;
+    this._route.params.subscribe((params: {id: number}) => {
+      let featureId: number = params.id;
       this._featuresService.get(featureId).subscribe((feature: any) => {
         this.title = feature.title;
         this.user = feature.user;
@@ -49,7 +49,7 @@ export class FeaturesFormComponent implements OnInit  {
       user: this.user,
       enabled: enabled,
       icon: this.icon,
-      id: this.id || this.title.replace(/\s+/g, '.'),
+      id: this.id ,
       created: now,
       modified: now,
     };
@@ -58,7 +58,7 @@ export class FeaturesFormComponent implements OnInit  {
         this.goBack();
       });
     } else {
-      this._featuresService.update(this.id, this.feature).subscribe(() => {
+      this._featuresService.update(this.feature).subscribe(() => {
         this.goBack();
       });
     }
