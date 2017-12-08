@@ -13,7 +13,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { routedComponents, AppRoutingModule } from './app-routing.module';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './mockapi/in-memory-data.service';
+import { InMemoryDataService } from '.././mockapi/in-memory-data.service';
 
 import { SharedModule } from './shared/shared.module';
 import { UserService } from '../services/user.service';

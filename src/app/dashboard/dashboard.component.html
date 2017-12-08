@@ -74,7 +74,7 @@
         <mat-nav-list class="will-load item-list">
           <ng-template tdLoading="items.load">
             <ng-template let-item let-last="last" ngFor [ngForOf]="items">
-              <a mat-list-item layout-align="row" [routerLink]="['../item', item.item_id]">
+              <a mat-list-item layout-align="row" [routerLink]="['../item', item.id]">
                 <mat-icon matListAvatar> {{item.icon}} </mat-icon>
                 <h3 matLine> {{item.name}} </h3>
                 <p matLine> {{item.description | truncate:50 }} </p> 
