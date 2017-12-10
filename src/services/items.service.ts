@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
-import { HttpInterceptorService, RESTService } from '@covalent/http';
+
 import { MOCK_API } from '../config/api.config';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -11,7 +11,7 @@ import { Service } from './service';
 @Injectable()
 export class ItemsService extends Service  {
   private apiurl = 'api/items2';  // URL to web api
-  constructor( private http: HttpClient,private _http: HttpInterceptorService) {
+  constructor( private http: HttpClient) {
     super();
  
   }

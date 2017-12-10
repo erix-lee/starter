@@ -21,8 +21,10 @@ const routes: Routes = [
     {
         path: '',
         component: MainComponent,
+
         children: [
             {
+                
                 component: DashboardComponent,pathMatch: 'full' ,
                 path: '',
             },

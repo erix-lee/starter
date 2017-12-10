@@ -2,7 +2,7 @@ import { Provider, SkipSelf, Optional, InjectionToken, Injectable } from '@angul
 import { Response, Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { HttpInterceptorService, RESTService } from '@covalent/http';
+
  
 
 import { catchError, map, tap } from 'rxjs/operators';

@@ -9,19 +9,19 @@ import { Router } from '@angular/router';
 export class MainComponent {
 
   routes: Object[] = [{
-      title: 'Dashboard',
+      title: '首页',
       route: '/',
       icon: 'dashboard',
     }, {
-      title: 'Product Dashboard',
+      title: '产品',
       route: '/product',
       icon: 'view_quilt',
     }, {
-      title: 'Product Logs',
+      title: '日志',
       route: '/logs',
       icon: 'receipt',
     }, {
-      title: 'Manage Users',
+      title: '用户管理',
       route: '/users',
       icon: 'people',
     },

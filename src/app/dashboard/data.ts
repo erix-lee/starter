@@ -15,7 +15,7 @@ export let single: any = [
 
 export let multi: any = [
   {
-    'name': 'Container Apps',
+    'name': ' Apps',
     'series': [
       {
         'value': 2469,
