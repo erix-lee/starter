@@ -11,7 +11,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable()
-export class AlertsService extends Service  {
+export class AlertsService extends Service<any>  {
   private apiurl = 'api/alerts2';  // URL to web api
   constructor( private http: HttpClient) {
     super();

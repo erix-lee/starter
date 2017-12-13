@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Quickstart App",
   "scripts": {
-    "start": "ng serve",
+    "start": "ng serve ",
     "e2e": "ng e2e",
     "lint": "ng lint"
   },
@@ -66,7 +66,7 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.1.0",
     "tslint": "^5.2.0",
-    "typescript": "2.4.2"
+    "typescript": "^2.4.2"
   },
   "optionalDependencies": {
     "@covalent/data": "~0.7.0"

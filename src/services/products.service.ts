@@ -6,7 +6,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Service } from './service';
 import { Observable } from 'rxjs/Observable';
 @Injectable()
-export class ProductsService extends Service  {
+export class ProductsService extends Service<any>  {
   private apiurl = 'api/products';  // URL to web api
   constructor( private http: HttpClient) {
     super();

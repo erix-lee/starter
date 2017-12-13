@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-export abstract class Service   {
+export abstract class Service<T>   {
 
   constructor() {
  

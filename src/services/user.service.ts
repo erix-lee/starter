@@ -19,7 +19,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable()
-export class UserService extends Service {
+export class UserService extends Service<IUser> {
   private apiurl = 'api/users';  // URL to web api
   constructor(private http: HttpClient) {
     super( );

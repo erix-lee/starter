@@ -19,7 +19,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable()
-export class FeaturesService extends Service  {
+export class FeaturesService extends Service<IFeature>  {
   private apiurl = 'api/features';  // URL to web api
   constructor( private http: HttpClient) {
     super();
